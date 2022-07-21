@@ -1,0 +1,17 @@
+<div>
+    <h1>
+        Форма имени
+    </h1>
+    <form method="post">
+        {%csrf_token %}
+        {{ form.name }} <br>
+        {{ form.age }} <br>
+        <button type="submit">
+            Save
+        </button>
+    </form>
+    {% if error%}
+        <h1>{{ error }}</h1>
+    {% endif %}
+
+</div>
